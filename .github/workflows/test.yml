@@ -1,0 +1,27 @@
+name: Build TEST
+
+on:
+  push:
+    branches:
+      - wkflw
+
+jobs:
+  build:
+    env:
+      DEPLOY_USER: gh-dcs-deploy
+      DEPLOY_HOST: lordvesel.win
+      RELEASE_DIR: /var/www/dcs-docs/dev/releases/${{ github.ref }}/${{ github.run_number }}
+      RELEASES_DIR: /var/www/dcs-docs/dev/releases/
+      CURRENT_DIR: /var/www/dcs-docs/dev/current
+      VARZA: ${{ env.RELEASE_DIR }}/${{ env.DEPLOY_HOST }}
+    runs-on:
+      - self-hosted
+      - dcs
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Build mkdocs
+      run: |
+        echo $VARZA
