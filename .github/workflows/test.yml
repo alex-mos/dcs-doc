@@ -18,12 +18,11 @@ jobs:
       - dcs
 
     steps:
-      env:
-        VARZA: ${{ env.RELEASE_DIR }}/${{ env.DEPLOY_HOST }}
-
     - name: Checkout
       uses: actions/checkout@v2
 
     - name: Build mkdocs
+      env:
+        VARZA: ${{ env.RELEASE_DIR }}/${{ env.DEPLOY_HOST }}
       run: |
         echo $VARZA
