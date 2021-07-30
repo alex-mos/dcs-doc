@@ -5,9 +5,10 @@ on:
     branches:
       - wkflw
 
+env:
+  IMAGE_PHP: registry.p5s-dev.ru/atom/php-fpm:${{ github.sha }}
+
 jobs:
-  env:
-    IMAGE_PHP: registry.p5s-dev.ru/atom/php-fpm:${{ github.sha }}
   build:
     env:
       DEPLOY_USER: gh-dcs-deploy
