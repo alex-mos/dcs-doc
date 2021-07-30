@@ -25,7 +25,7 @@ jobs:
 
     - name: Build mkdocs
       env:
-        VARZA: ${{ env.RELEASE_DIR }}: ${{ env.IMAGE_PHP }}
+        VARZA: "${{ env.RELEASE_DIR }}: ${{ env.IMAGE_PHP }}"
       run: |
         echo $IMAGE_PHP
         echo $VARZA
