@@ -6,6 +6,8 @@ on:
       - wkflw
 
 jobs:
+  env:
+    IMAGE_PHP: registry.p5s-dev.ru/atom/php-fpm:${{ github.sha }}
   build:
     env:
       DEPLOY_USER: gh-dcs-deploy
@@ -23,6 +25,7 @@ jobs:
 
     - name: Build mkdocs
       env:
-        VARZA: ${{ env.RELEASE_DIR }}/${{ env.DEPLOY_HOST }}
+        VARZA: ${{ env.RELEASE_DIR }}: ${{ env.IMAGE_PHP }}
       run: |
+        echo $IMAGE_PHP
         echo $VARZA
