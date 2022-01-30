@@ -12,6 +12,7 @@ hide:
 
 - [F-16C Viper](f16/index.md) by ED
 - [F/A-18C](fa18c/index.md) by ED
+- [P-51D](p51d/01.legend.md) by ED
 - [Supercarrier](sc/index.md) by ED
 
 External:

@@ -73,7 +73,16 @@ nav:
           - fa18c/13.l2tpod.md
           - fa18c/14.cm.md
           - fa18c/15.append.md
-
+      - P-51D:
+          - p51d/01.legend.md
+          - p51d/02.introduction.md
+          - p51d/03.overview.md
+          - p51d/04.cockpit.md
+          - p51d/05.procedures.md
+          - p51d/06.emergency.md
+          - p51d/07.combat.md
+          - p51d/08.radio.md
+          - p51d/09.supplements.md
 
 theme:
   name: material
